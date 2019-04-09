@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Stopwatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="22e-Bt-l0B">
+                                <rect key="frame" x="56" y="480" width="60" height="54"/>
+                                <state key="normal" image="play"/>
+                                <connections>
+                                    <action selector="btnplay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lc0-3Y-NsA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nw0-jK-7pf">
+                                <rect key="frame" x="169" y="480" width="53" height="54"/>
+                                <state key="normal" image="pause"/>
+                                <connections>
+                                    <action selector="btnpause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FcY-ZC-Lk9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4l-eR-UX8">
+                                <rect key="frame" x="280" y="480" width="54" height="53"/>
+                                <state key="normal" image="reset"/>
+                                <connections>
+                                    <action selector="btnreset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cJs-Rl-3Gi"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8mV-P7-NLI">
+                                <rect key="frame" x="0.0" y="184" width="375" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="95"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="P4l-eR-UX8" secondAttribute="bottom" constant="150" id="5jm-BN-N2E"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="22e-Bt-l0B" secondAttribute="bottom" constant="150" id="Mmv-g0-BQG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nw0-jK-7pf" secondAttribute="bottom" constant="150" id="ScR-3a-uYW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="P4l-eR-UX8" secondAttribute="trailing" constant="30" id="jyd-Na-LLe"/>
+                            <constraint firstItem="22e-Bt-l0B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="kEy-mJ-y5X"/>
+                            <constraint firstItem="nw0-jK-7pf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pQu-5u-yVP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="pausebutton" destination="nw0-jK-7pf" id="6sY-1Y-U20"/>
+                        <outlet property="playbutton" destination="22e-Bt-l0B" id="wB6-yF-nfn"/>
+                        <outlet property="resetbutton" destination="P4l-eR-UX8" id="iIO-n1-fiy"/>
+                        <outlet property="titlelabel" destination="8mV-P7-NLI" id="LNf-dN-OLH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="61.600000000000001" y="27.436281859070466"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pause" width="37.5" height="37.5"/>
+        <image name="play" width="37.5" height="37.5"/>
+        <image name="reset" width="37.5" height="37.5"/>
+    </resources>
+</document>
